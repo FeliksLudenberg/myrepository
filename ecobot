@@ -1,0 +1,20 @@
+import discord
+from discord.ext import commands
+
+bot = commands.Bot(command_prefix='/', intents = discord.Intents.all())
+
+@bot.command('start')
+async def start(ctx):
+    await ctx.send('Привет! Это экобот. мы камьюнити савременых ребят которые топят за бережное отношение к окружающей среде. Здесь ты найдёшь информацию о том как правильно сортировать тот или иной материал. Сделай вклад в планету оставив на ней свой бережный след.')
+    await ctx.send('Напиши в чате пластик, дерево, батарейка, чтобы юот вывел как их правельно утилизировать')
+@bot.command('дерево')
+async def tree(ctx):
+    await ctx.send('зжигание древестных отходов производятся в специальных печах')
+@bot.command('пластик')
+async def plastick(ctx):
+    await ctx.send('отнесите пластик в точку зора вторсырья')       
+@bot.command('батарейка')
+async def bataree(ctx):
+    await ctx.send('отнесите её в отдельное место для переработки')    
+    
+bot.run
