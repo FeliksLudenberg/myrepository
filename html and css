@@ -1,0 +1,20 @@
+#index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВКЛАДКА В БРАУЗЕРЕ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+</body>
+</html>
+#style.css
+h1{
+    color: chartreuse;
+    background-color: aqua;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 65;
+}
