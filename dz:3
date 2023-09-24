@@ -1,0 +1,18 @@
+from flask import Flask
+
+app = Flask(__name__)
+import random
+facts = ['Большинство людей, страдающих технологической зависимостью, испытывают сильный стресс, когда они находятся вне зоны покрытия сети или не могут использовать свои устройства.', 'Согласно исследованию, проведенному в 2018 году, более 50% людей в возрасте от 18 до 34 лет считают себя зависимыми от своих смартфонов.','Изучение технологической зависимости является одной из наиболее актуальных областей научных исследований в настоящее время.','Согласно исследованию, проведенному в 2019 году, более 60% людей отвечают на рабочие сообщения в своих смартфонах в течение 15 минут после того, как они вышли с работы.','Один из способов борьбы с технологической зависимостью - это поиск занятий, которые приносят удовольствие и улучшают настроение.']
+password = ['A1Yy3ert', 'a8uiO9s', 'Bfff09kl', 'bsna37k2e', 'Cess8989', 'c3300yyuu', '11UwU44e', '2ghmdui', '3hdkirr9ojg', '4jjdgtruejYku', '5jyejhey@jjuR', '6kdyYYTILjpp', '7kkKKjftrui', '8uuiiojhdtsP', '90jtTyUjfb9', 'rrrUUyhjOkGRBhhG@', 'gfdfggfdirrjks@4#']
+@app.route('/')
+def hello_world():
+    return '<h1>hello world!</h1><a href="/random_fact">Посмотреть случайный факт!</a>'
+
+@app.route('/random_fact')
+def random_fact():
+    return f'<p>{random.choice(facts)}</p>'
+
+@app.route('/password')
+def password():
+    return f'<p>{random.choice(password)}</p>'
+app.run(debug=True)
